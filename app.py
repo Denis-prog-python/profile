@@ -53,6 +53,11 @@ def load_user(user_id):
 def home():
     return render_template('base.html')
 
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -97,11 +102,6 @@ def edit_profile():
 
     return render_template('edit_profile.html', form=form)
 
-@app.route('/logout')
-@login_required
-def logout():
-    logout_user()
-    return redirect(url_for('home'))
 
 def create_test_user():
     if not User.query.filter_by(email='test@example.com').first():

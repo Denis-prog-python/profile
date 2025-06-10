@@ -108,32 +108,23 @@ label {
 }
 
 /* Добавьте в конец файла */
-.navbar {
-    background-color: #3498db;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+.home-buttons {
     display: flex;
+    flex-direction: column;
     gap: 15px;
+    max-width: 300px;
+    margin: 40px auto;
 }
 
-.navbar a {
-    color: white;
+.home-buttons .btn {
+    text-align: center;
     text-decoration: none;
-    font-weight: 500;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    padding: 12px;
 }
 
-.navbar a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Стили для флеш-сообщений */
 .flash {
     padding: 15px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     border-radius: 5px;
     text-align: center;
 }
